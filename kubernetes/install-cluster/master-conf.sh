@@ -20,6 +20,6 @@ mkdir -p $HOME/.kube
 cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 chown $(id -u):$(id -g) $HOME/.kube/config
 
-echo ===== Instaling Pod Network (Calico in this case) =====
+echo ===== Instaling Pod Network =====
 
 kubectl apply -f https://docs.projectcalico.org/v3.9/manifests/calico.yaml
