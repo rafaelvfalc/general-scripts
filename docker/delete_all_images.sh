@@ -1,1 +1,1 @@
-sudo docker rmi -f $(sudo docker images -a -q)
+sudo docker rmi -f $(sudo docker images -q)
