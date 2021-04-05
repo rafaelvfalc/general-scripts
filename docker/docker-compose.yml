@@ -24,7 +24,7 @@ services:
     volumes:
       - ./volumes/database_postgres:/var/lib/postgresql/data
     ports:
-      - "127.0.0.1:4002:5432"
+      - "0.0.0.0:4002:5432"
   redis:
     image: redis:alpine
     ports:
@@ -66,8 +66,8 @@ services:
   wiremock:
     image: rodolpheche/wiremock
     ports:
-      - "8080:8080"
-      - "8079:8443"
+      - "0.0.0.0:8080:8080"
+      - "0.0.0.0:8079:8443"
     volumes:
       - ./volumes/wiremock:/home/wiremock
     command: ["--https-port", "8443", "--verbose"]
